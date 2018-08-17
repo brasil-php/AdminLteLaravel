@@ -1,0 +1,31 @@
+{
+    "name": "brasil-php/laravel-adminlte",
+    "description": "AdminLte module for laravel",
+    "keywords": ["framework", "laravel", "AdminLTE"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "5.6.*",
+        "laravel/tinker": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrasilPHP\\AdminLte\\":"src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BrasilPHP\\AdminLte\\AdminLteServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
