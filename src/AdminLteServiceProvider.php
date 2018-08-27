@@ -8,6 +8,7 @@
 
 namespace BrasilPHP\AdminLte;
 
+use BrasilPHP\AdminLte\Command\InstallCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AdminLteServiceProvider extends ServiceProvider
@@ -15,13 +16,13 @@ class AdminLteServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../assets' => public_path(),
+            __DIR__ . '/../assets' => public_path(),
         ], 'adminlte:assets');
 
-        $this->loadRoutesFrom(__DIR__.'/../routes/routes.php');
-        $this->loadViewsFrom(__DIR__.'/../views','adminlte');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/routes.php');
+        $this->loadViewsFrom(__DIR__ . '/../views', 'adminlte');
         $this->commands([
-
+            InstallCommand::class
         ]);
     }
 
