@@ -9,6 +9,7 @@
 namespace BrasilPHP\AdminLte;
 
 use BrasilPHP\AdminLte\Command\InstallCommand;
+use BrasilPHP\AdminLte\Command\NewPageCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AdminLteServiceProvider extends ServiceProvider
@@ -22,7 +23,8 @@ class AdminLteServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/routes.php');
         $this->loadViewsFrom(__DIR__ . '/../views', 'adminlte');
         $this->commands([
-            InstallCommand::class
+            InstallCommand::class,
+            NewPageCommand::class
         ]);
     }
 

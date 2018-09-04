@@ -657,5 +657,6 @@
         $('.sidebar-menu').tree()
     })
 </script>
+@yield('scripts')
 </body>
 </html>
